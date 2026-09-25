@@ -2236,4 +2236,16 @@
         <item>0</item>
         <item>1</item>
     </string-array>
+
+    <string-array name="package_installer_style_entries">
+        <item>@string/package_installer_style_aosp</item>
+        <item>@string/package_installer_style_compose_dialog</item>
+        <item>@string/package_installer_style_compose_bottom_sheet</item>
+    </string-array>
+
+    <string-array name="package_installer_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
 </resources>

@@ -15,6 +15,12 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Package installer -->
+    <string name="package_installer_style_title">Package installer style</string>
+    <string name="package_installer_style_aosp">AOSP</string>
+    <string name="package_installer_style_compose_dialog">Compose dialog</string>
+    <string name="package_installer_style_compose_bottom_sheet">Compose bottom sheet</string>
+
     <!-- Dynamic island -->
     <string name="status_bar_dynamic_island_title">Dynamic island</string>
     <string name="status_bar_dynamic_island_summary">Configure the island and choose which features can appear</string>

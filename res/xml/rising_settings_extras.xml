@@ -28,6 +28,15 @@
             android:defaultValue="true"
             app:position="top" />
 
+        <com.android.settings.preferences.SecureSettingListPreference
+            android:key="package_installer_style"
+            android:title="@string/package_installer_style_title"
+            android:dialogTitle="@string/package_installer_style_title"
+            android:entries="@array/package_installer_style_entries"
+            android:entryValues="@array/package_installer_style_values"
+            android:defaultValue="1"
+            android:summary="%s" />
+
         <!-- Floating rotation button -->
         <com.android.settings.preferences.SecureSettingSwitchPreference
             android:key="show_rotation_suggestions"
