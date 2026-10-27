@@ -580,11 +580,13 @@
     <string name="ts_import_target_list">Import target list</string>
     <string name="ts_import_target_list_summary">Import a list of target package names from a file</string>
     <string name="ts_target_list_imported">Target list imported</string>
+    <string name="ts_target_list_invalid">Target list rejected near: %s</string>
     <string name="ts_verification_mode">Verification mode</string>
     <string name="ts_verification_mode_auto">Auto</string>
     <string name="ts_verification_auto_count">%1$d automatic</string>
     <string name="ts_verification_cert_count">%1$d certificate</string>
     <string name="ts_verification_leaf_count">%1$d leaf</string>
+    <string name="ts_verification_skip_count">%1$d skip</string>
     <string name="ts_mode_auto">Auto</string>
     <string name="ts_mode_leaf">Leaf certificate</string>
     <string name="ts_mode_cert">Full certificate</string>
