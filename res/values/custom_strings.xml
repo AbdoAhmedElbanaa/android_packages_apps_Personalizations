@@ -659,6 +659,7 @@
     <string name="action_delete">Delete</string>
     <string name="action_import">Import</string>
     <string name="action_select_all">Select all</string>
+    <string name="action_deselect_unnecessary">Deselect unnecessary</string>
     <string name="action_reset">Reset</string>
     <string name="action_add_installed">Add installed</string>
     <string name="action_search_apps">Search apps</string>
