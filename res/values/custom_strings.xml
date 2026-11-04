@@ -607,7 +607,7 @@
     <string name="ts_footer_body">A keybox is fetched and kept valid automatically. The revocation status is checked every 24 hours, and a new keybox is fetched from the official source if the current one is revoked or suspended.\n\nFor manual setup:\n1. Tap \"Fetch latest keybox\" to download one automatically, or import your own from a trusted source.\n2. Open \"Manage target apps\" and select the apps that require integrity checks.\n3. Set target mode to \"Leaf\" if your device has a working TEE; otherwise leave it as Auto.\n4. Recheck your Play Integrity status.\n\nNote: If no valid latest keybox is available, auto-fetch is paused for 24 hours before retrying. Always delete the existing keybox before importing a new one.</string>
 
     <!-- Device RKP (Duck) keybox generation in TrickyStore -->
-    <string name="ts_rkp_title">Device RKP · Duck V1</string>
+    <string name="ts_rkp_title">Device RKP · Duck</string>
     <string name="ts_rkp_enabled">Use device RKP</string>
     <string name="ts_rkp_enabled_summary">Automatically generate a keybox and renew it before expiry. Importing a keybox turns this off.</string>
     <string name="ts_rkp_provision">Generate keybox</string>
@@ -626,9 +626,9 @@
     <string name="ts_rkp_active_subtitle">Device RKP keybox active</string>
     <string name="ts_rkp_fetch_disabled">Disabled while device RKP is on. Turn it off to use the online keybox.</string>
     <string name="ts_rkp_expired">Generated keybox expired. Automatic replacement will run when a connection is available.</string>
-    <string name="ts_rkp_hal_rejected">Firmware rejected the request (code %1$d). Duck V1 may not be supported.</string>
+    <string name="ts_rkp_hal_rejected">Firmware rejected the request (code %1$d). No compatible provisioning method succeeded.</string>
     <string name="ts_rkp_http_error">Provisioning server rejected the request (HTTP %1$d)</string>
-    <string name="ts_rkp_unsupported">The device does not expose a compatible V1 provisioning interface</string>
+    <string name="ts_rkp_unsupported">The device does not expose a compatible provisioning interface</string>
     <string name="ts_rkp_network_error">Could not reach the provisioning server. Check your connection.</string>
     <string name="ts_rkp_submission_unknown">The server response was lost. The request may have been processed; no automatic retry was made.</string>
     <string name="ts_rkp_invalid_chain">Keybox certificates failed validation. The existing keybox was kept.</string>
@@ -639,6 +639,9 @@
     <string name="ts_rkp_waiting_network">Waiting for an internet connection to generate or renew the keybox</string>
     <string name="ts_rkp_auto_paused">%1$s Automatic provisioning is paused. Use Generate keybox to retry.</string>
     <string name="ts_rkp_auto_retry">%1$s Next automatic attempt: %2$s.</string>
+    <string name="ts_rkp_native_unavailable">The native provisioning helper is unavailable or incompatible with this firmware</string>
+    <string name="ts_rkp_native_transport">The native provisioning service stopped unexpectedly. Automatic provisioning is paused.</string>
+    <string name="ts_rkp_invalid_response">The device returned an invalid provisioning response. The existing keybox was kept.</string>
 
     <!-- Spoofing (general/shared) -->
     <string name="spoofing_applying_changes">Applying changes…</string>
