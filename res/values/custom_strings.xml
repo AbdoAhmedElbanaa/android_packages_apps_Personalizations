@@ -493,6 +493,7 @@
     <string name="pif_fetch_pixel_beta">Fetch Pixel Canary fingerprint</string>
     <string name="pif_fetched_model">Fetched fingerprint for %1$s</string>
     <string name="pif_recommended_suffix">Recommended</string>
+    <string name="pif_device_suggested">%1$s · Suggested</string>
     <string name="pif_select_device">Select device</string>
     <string name="pif_no_devices_found">No devices found</string>
     <string name="pif_no_api_key">Failed to extract Flash Tool API key</string>
