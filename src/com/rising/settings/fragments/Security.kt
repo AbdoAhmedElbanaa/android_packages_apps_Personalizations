@@ -18,6 +18,7 @@ package com.rising.settings.fragments
 
 import android.content.Context
 import android.os.Bundle
+import android.provider.Settings
 import androidx.preference.Preference
 import com.android.internal.logging.nano.MetricsProto
 import com.android.internal.util.android.SystemRestartUtils
@@ -30,6 +31,7 @@ import com.android.settingslib.search.SearchIndexable
 class Security : SettingsPreferenceFragment(), Preference.OnPreferenceChangeListener {
 
     companion object {
+        private const val HIDE_DEVELOPER_STATUS_KEY = "hide_developer_status_settings"
         private const val HIDE_SCREEN_CAPTURE_STATUS_KEY = "hide_screen_capture_status"
         private const val NO_STORAGE_RESTRICT_KEY = "no_storage_restrict"
         private const val WINDOW_IGNORE_SECURE_KEY = "window_ignore_secure"
@@ -45,6 +47,7 @@ class Security : SettingsPreferenceFragment(), Preference.OnPreferenceChangeList
         }
     }
 
+    private var mHideDevStatusPref: Preference? = null
     private lateinit var mHideScreenCapturePref: Preference
     private lateinit var mNoStorageRestrictPref: Preference
     private lateinit var mWindowIgnoreSecurePref: Preference
@@ -53,6 +56,7 @@ class Security : SettingsPreferenceFragment(), Preference.OnPreferenceChangeList
         super.onCreate(savedInstanceState)
         addPreferencesFromResource(R.xml.rising_settings_security)
 
+        mHideDevStatusPref = findPreference(HIDE_DEVELOPER_STATUS_KEY)
         mHideScreenCapturePref = findPreference(HIDE_SCREEN_CAPTURE_STATUS_KEY)!!
         mNoStorageRestrictPref = findPreference(NO_STORAGE_RESTRICT_KEY)!!
         mWindowIgnoreSecurePref = findPreference(WINDOW_IGNORE_SECURE_KEY)!!
@@ -60,6 +64,26 @@ class Security : SettingsPreferenceFragment(), Preference.OnPreferenceChangeList
         mHideScreenCapturePref.onPreferenceChangeListener = this
         mNoStorageRestrictPref.onPreferenceChangeListener = this
         mWindowIgnoreSecurePref.onPreferenceChangeListener = this
+        updateHideDevSummary()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        updateHideDevSummary()
+    }
+
+    private fun updateHideDevSummary() {
+        val resolver = context?.contentResolver ?: return
+        val enabled = Settings.Secure.getInt(
+            resolver, Settings.Secure.HIDE_DEVELOPER_STATUS_ENABLED, 0
+        ) == 1
+        val raw = Settings.Secure.getString(resolver, Settings.Secure.HIDE_DEVELOPER_STATUS)
+        val count = raw?.split(",")?.count { it.isNotBlank() } ?: 0
+        mHideDevStatusPref?.summary = if (enabled && count > 0) {
+            getString(R.string.hide_developer_status_count, count)
+        } else {
+            getString(R.string.hide_developer_status_summary)
+        }
     }
 
     override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {

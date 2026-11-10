@@ -1351,6 +1351,9 @@
     <!-- Hide developer status -->
     <string name="hide_developer_status_title">Hide developer status</string>
     <string name="hide_developer_status_summary">Hide developer status from apps</string>
+    <string name="hide_developer_status_none_configured">No target apps configured</string>
+    <string name="hide_developer_status_count">%1$d apps configured</string>
+    <string name="hide_developer_status_empty_description">Select apps to hide developer options and ADB debugging status from them</string>
     <string name="search">Search</string>
     <string name="search_apps">Search apps</string>
 

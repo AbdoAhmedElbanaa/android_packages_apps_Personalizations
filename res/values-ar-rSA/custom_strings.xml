@@ -1156,4 +1156,10 @@
     <!-- QS Bluetooth auto on -->
     <string name="qs_bt_auto_on_title">Automatic Bluetooth on</string>
     <string name="qs_bt_auto_on_summary">Always turn on Bluetooth when pressing the Bluetooth QS tile</string>
+    <!-- Hide developer status -->
+    <string name="hide_developer_status_title">إخفاء حالة خيارات المطور</string>
+    <string name="hide_developer_status_summary">إخفاء حالة خيارات المطور وتصحيح أخطاء USB عن التطبيقات المحددة</string>
+    <string name="hide_developer_status_none_configured">لم يتم تحديد أي تطبيقات</string>
+    <string name="hide_developer_status_count">تم تكوين %1$d تطبيقات</string>
+    <string name="hide_developer_status_empty_description">اختر التطبيقات لإخفاء حالة خيارات المطور وتصحيح أخطاء ADB عنها</string>
 </resources>

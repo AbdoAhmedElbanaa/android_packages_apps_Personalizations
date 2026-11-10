@@ -20,12 +20,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/security_title">
 
+        <com.android.settings.preferences.ui.AdaptivePreference
+            android:key="hide_developer_status_settings"
+            android:title="@string/hide_developer_status_title"
+            android:summary="@string/hide_developer_status_summary"
+            android:fragment="com.rising.settings.fragments.HideDeveloperStatusSettings"
+            app:position="top" />
+
         <com.android.settings.preferences.GlobalSettingSwitchPreference
             android:key="hide_screen_capture_status"
             android:title="@string/hide_screen_capture_status_title"
             android:summary="@string/hide_screen_capture_status_summary"
-            android:defaultValue="false"
-            app:position="top" />
+            android:defaultValue="false" />
 
         <com.android.settings.preferences.SecureSettingSwitchPreference
             android:key="show_clipboard_overlay"
